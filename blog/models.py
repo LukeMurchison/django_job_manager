@@ -1,3 +1,4 @@
+from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.urls import reverse
 
@@ -18,13 +19,16 @@ class Job(models.Model):
     finishing = models.IntegerField()
     package = models.IntegerField()
 
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('post_detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
 
 class Paper(models.Model):
-    paper_name = models.TextField()
+    paper_name = models.CharField(max_length=200)
     cost = models.IntegerField()
+
+    def get_absolute_url(self):
+        return reverse('post_paper_detail', args=[str(self.id)])
 

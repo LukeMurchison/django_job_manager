@@ -3,8 +3,8 @@
 {% block content %}
     {% for job in object_list %}
         <div class='post-entry'>
-            <h2><a href="{%url 'post_detail' job.pk%}">{{job.job_name}}</a></h2>
-            <p>{{job.client}}</p>
+            <h2><a href="{%url 'post_paper_detail' job.pk%}">{{job.paper_name}}</a></h2>
+            <p>{{job.cost}}</p>
         </div>
     {% endfor %}
 {% endblock content %}
