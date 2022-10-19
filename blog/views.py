@@ -1,28 +1,28 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post
+from .models import Job
 from django.urls import reverse_lazy
 
 # Create your views here.
 
-class BlogListView(ListView):
-    model = Post
+class JobListView(ListView):
+    model = Job
     template_name = 'home.html'
 
-class BlogDetailView(DetailView):
-    model = Post
+class JobDetailView(DetailView):
+    model = Job
     template_name = 'post_detail.html'
 
-class BlogCreateView(CreateView):
-    model = Post
+class JobCreateView(CreateView):
+    model = Job
     template_name = 'post_new.html'
-    fields = ['title', 'author', 'body']
+    fields = ['job_name', 'notes', 'client', 'start_time', 'end_time', 'paper', 'copies', 'sides', 'oversized', 'color', 'mark_up', 'finishing', 'package']
 
-class BlogUpdateView(UpdateView):
-    model = Post
+class JobUpdateView(UpdateView):
+    model = Job
     template_name = 'post_edit.html'
     fields = ['title', 'body']
 
-class BlogDeleteView(DeleteView):
-    model = Post
+class JobDeleteView(DeleteView):
+    model = Job
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')

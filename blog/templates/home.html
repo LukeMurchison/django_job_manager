@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for post in object_list %}
+    {% for job in model %}
         <div class='post-entry'>
-            <h2><a href="{%url 'post_detail' post.pk%}">{{post.title}}</a></h2>
-            <p>{{post.body}}</p>
+            <h2><a href="{%url 'post_detail' post.pk%}">{{job.job_name}}</a></h2>
+            <p>{{job.client}}</p>
         </div>
     {% endfor %}
 {% endblock content %}
