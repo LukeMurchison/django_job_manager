@@ -2,7 +2,9 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Job, Paper
 from django.urls import reverse_lazy
 
+
 # Create your views here.
+
 
 class JobListView(ListView):
     model = Job
@@ -49,3 +51,7 @@ class PaperDetailView(DetailView):
 class PaperListView(ListView):
     model = Paper
     template_name = 'paper_home.html'
+
+
+
+    

@@ -5,6 +5,7 @@
         <div class='post-entry'>
             <h2><a href="{%url 'post_paper_detail' job.pk%}">{{job.paper_name}}</a></h2>
             <p>{{job.cost}}</p>
+            <p>{{math}}</p>
         </div>
     {% endfor %}
 {% endblock content %}

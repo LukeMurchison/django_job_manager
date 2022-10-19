@@ -3,7 +3,7 @@
 {% block content %}
     <div class="post-entry">
         <h2>{{object.paper_name}}</h2>
-        <p>{{object.cost}}</p>
+        <p>${{object.cost}}</p>
     </div>
 
     <a href="{%url 'post_paper_edit' object.pk%}">+ Edit Job Post</a>

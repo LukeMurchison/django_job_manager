@@ -3,7 +3,18 @@
 {% block content %}
     <div class="post-entry">
         <h2>{{object.job_name}}</h2>
-        <p>{{object.client}}</p>
+        <p>Notes: {{object.notes}}</p>
+        <p>Client: {{object.client}}</p>
+        <p>Starting Time: {{object.start_time}}</p>
+        <p>End Time: {{object.end_time}}</p>
+        <p>Paper: {{object.paper}}</p>
+        <p>Copies: {{object.copies}}</p>
+        <p>Sides: {{object.sides}}</p>
+        <p>Is oversized: {{object.oversized}}</p>
+        <p>Has color: {{object.color}}</p>
+        <p>Mark up: {{object.mark_up}}</p>
+        <p>Finishing: {{object.finishing}}</p>
+        <p>Packaging: {{object.package}}</p>
     </div>
 
     <a href="{%url 'post_edit' object.pk%}">+ Edit Job Post</a>
