@@ -6,24 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django Blog</title>
-    <link rel="stylesheet" href="{%static 'base.css'%}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 </head>
 <body>
     <div>
         <header>
-            <div class="nav-left">
-                <h1><a href="{% url 'home'%}">Job Viewer</a></h1>
-            </div>
-            <div class="nav-left">
-                <h1><a href="{% url 'paper_home'%}">Paper Viewer</a></h1>
-            </div>
-            <div class="nav-right">
-                <h1><a href="{% url 'post_new'%}">+ New Job Post</a></h1>
-            </div>
-            <div class="nav-right"> 
-                <h1><a href="{% url 'paper_new'%}"> + New Paper Post</a></h1> 
-            </div>
+
+            <div class="w3-bar w3-black w3-xlarge">
+                <img src="static/images/Oxford_Printing_White.png" alt="OXP Logo" style="width:9%" class="w3-left w3-padding w3-mobile" >
+                <a href="{% url 'home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16">View Jobs</a>
+                <a href="{% url 'paper_home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 ">View Paper</a>
+                <a href="{% url 'post_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add Job</a>
+                <a href="{% url 'paper_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add paper</a>
+            </div> 
+
+            
         </header>   
         {% block content %}
         {% endblock content %}

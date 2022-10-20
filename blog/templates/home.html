@@ -1,19 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for job in object_list %}
-        <div class='post-entry'>
-            <p>ID</p>
-            <p>Job Name</p>
-            <p>Client Name</p>
-            <p>Start Date</p>
-            <p>End Date</p>
-            <p>{{job.id}}</p>
-            <h2><a href="{%url 'post_detail' job.pk%}">{{job.job_name}}</a></h2>
-            <p>{{job.client}}</p>
-            <p>{{job.start_time}}</p>
-            <p>{{job.end_time}}</p>
-        </div>
-    {% endfor %}
+    <table class="w3-table-all w3-hoverable w3-card-4">
+        <tr>
+            <th class="w3-center" >ID</th>
+            <th class="w3-center">Job Name</th>
+            <th class="w3-center">Client Name</th>
+            <th class="w3-center">Start Date</th>
+            <th class="w3-center">End Date</th>
+            {% for job in object_list %}
+                <tr>
+                    <td class="w3-center" >{{job.id}}</td>
+                    <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.job_name}}</a></td>
+                    <td class="w3-center">{{job.client}}</td>
+                    <td class="w3-center">{{job.start_time}}</td>
+                    <td class="w3-center">{{job.end_time}}</td>
+                </tr>
+            {% endfor %}
+        </tr>
+    </table>
+    
 {% endblock content %}
 
