@@ -1,12 +1,14 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
+    height: 100%;
+    width: 100%;
 }
 
 header {
     border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
     display: flex;
+    justify-content: space-between;
 }
 
 header h1 a {
@@ -46,4 +48,134 @@ header h1 a {
 
 .post-entry h2 a:hover {
     color: red;
+}
+
+div.job_section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+div.container {
+    background-color: black;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+div.paper_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+div.container_job {
+    background-color: black;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+h1.paper {
+    background-color: black;
+    color: white;
+}
+
+form p {
+    font-weight: bolder;
+    width: auto;
+}
+
+#id_cost {
+    margin-left: 3.45em;
+}
+
+form.paper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid black;
+    padding: 3em;
+}
+
+form.job {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid black;
+    padding: 3em;
+    text-align: left;
+}
+
+div.w3-bar.w3-black.w3-xlarge {
+    display: flex;
+    justify-content: center;
+}
+
+h1.paper_red {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-weight: 600;
+}
+
+form.paper_red {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid black;
+    padding: 3em;
+    color: red;
+}
+
+#id_notes {
+    margin-left: 1.85em;
+}
+
+#id_client {
+    margin-left: 1.87em;
+}
+
+#id_start_time {
+    margin-left: .05em;
+}
+
+#id_end_time {
+    margin-left: .42em;
+}
+
+#id_paper {
+    margin-left: 1.83em;
+}
+
+#id_copies {
+    margin-left: 1.3em;
+}
+
+#id_sides {
+    margin-left: 2em;
+}
+
+#id_color {
+    margin-left: 2.15em;
+}
+
+#id_mark_up {
+    margin-left: .8em;
+}
+
+#id_finishing {
+    margin-left: .2em;
+}
+
+#id_package {
+    margin-left: .6em;
 }

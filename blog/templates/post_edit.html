@@ -1,9 +1,13 @@
 {%extends 'base.html'%}
-
+{%load static%}
 {% block content %}
-    <h1>Edit post</h1>
-    <form action="" method="post">{% csrf_token %}
-        {{form.as_p}}
-    <input type="submit" value="Update">
-    </form>
+<div class="job_section">
+    <div class="container_job">
+        <h1 class="paper">Edit Job</h1>
+        <form class="job" action="" method="post">{% csrf_token %}        
+            {{form.as_p}}
+            <input type="submit" value="Save">     
+        </form>
+    </div>
+</div>
 {% endblock content %}

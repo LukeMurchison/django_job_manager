@@ -1,12 +1,26 @@
 {% extends 'base.html' %}
-
+{%load static%}
 {% block content %}
-    {% for job in object_list %}
-        <div class='post-entry'>
+    <table class="w3-table-all w3-hoverable w3-card-4">
+        <tr>
+            <th class="w3-center">ID</th>
+            <th class="w3-center" >Paper Name</th>
+            <th class="w3-center">Cost</th>
+            {% for job in object_list %}
+                <tr>
+                    <td class="w3-center"><a href="{%url 'post_paper_detail' job.pk%}">{{job.id}}</a></td>
+                    <td class="w3-center"><a href="{%url 'post_paper_detail' job.pk%}">{{job.paper_name}}</a></td>
+                    <td class="w3-center"><a href="{%url 'post_paper_detail' job.pk%}">${{job.cost}}</a></td>
+                </tr>
+            {% endfor %}
+        </tr>
+    </table>
+{% endblock content %}
+
+
+
+{% comment %} <div class='post-entry'>
             <h2><a href="{%url 'post_paper_detail' job.pk%}">{{job.paper_name}}</a></h2>
             <p>{{job.cost}}</p>
             <p>{{math}}</p>
-        </div>
-    {% endfor %}
-{% endblock content %}
-
+        </div> {% endcomment %}

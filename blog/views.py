@@ -22,7 +22,7 @@ class JobCreateView(CreateView):
 class JobUpdateView(UpdateView):
     model = Job
     template_name = 'post_edit.html'
-    fields = ['job_name', 'client', 'notes', 'start_time', 'end_time']
+    fields = ['job_name', 'notes', 'client', 'start_time', 'end_time', 'paper', 'copies', 'sides', 'oversized', 'color', 'mark_up', 'finishing', 'package']
 
 class JobDeleteView(DeleteView):
     model = Job

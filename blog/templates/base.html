@@ -7,23 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django Blog</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="{% static "base.css"%}">
 </head>
 <body>
     <div>
         <header>
-
             <div class="w3-bar w3-black w3-xlarge">
-                <img src="static/images/Oxford_Printing_White.png" alt="OXP Logo" style="width:9%" class="w3-left w3-padding w3-mobile" >
-                <a href="{% url 'home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16">View Jobs</a>
-                <a href="{% url 'paper_home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 ">View Paper</a>
-                <a href="{% url 'post_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add Job</a>
-                <a href="{% url 'paper_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add paper</a>
+                <img src="{% static 'images/Oxford_Printing_White.png' %}" alt="OXP Logo" style="width:60%" class="w3-left w3-padding w3-mobile " >
             </div> 
-
-            
+            <div  class="w3-bar w3-black w3-xlarge">
+                <a href="{% url 'home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16">View Jobs</a>
+            </div> 
+            <div class="w3-bar w3-black w3-xlarge">
+                <a href="{% url 'paper_home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 ">View Paper</a>
+            </div> 
+            <div class="w3-bar w3-black w3-xlarge">
+                <a href="{% url 'post_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add Job</a>
+            </div> 
+            <div class="w3-bar w3-black w3-xlarge">
+                <a href="{% url 'paper_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add paper</a>
+            </div>             
         </header>   
         {% block content %}
         {% endblock content %}
     </div>
+    <script>
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+    </script>
 </body>
 </html>

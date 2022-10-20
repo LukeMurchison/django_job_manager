@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-
+{%load static%}
 {% block content %}
     <div class="post-entry">
         <h2>{{object.paper_name}}</h2>
         <p>${{object.cost}}</p>
     </div>
 
-    <a href="{%url 'post_paper_edit' object.pk%}">+ Edit Job Post</a>
-    <a href="{%url 'post_paper_delete' object.pk%}">+ Delete Job Post</a>
+    <a href="{%url 'post_paper_edit' object.pk%}">+ Edit Paper Post</a>
+    <a href="{%url 'post_paper_delete' object.pk%}">+ Delete Paper Post</a>
 {% endblock content %}

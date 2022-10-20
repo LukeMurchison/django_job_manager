@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
-
+{%load static%}
+<div>
+    <header>
+        <div class="w3-bar w3-black w3-xlarge">
+            <img src="blog/static/images/Oxford_Printing_White.png" alt="OXP Logo" style="width:60%" class="w3-left w3-padding w3-mobile " >
+        </div> 
+        <div  class="w3-bar w3-black w3-xlarge">
+            <a href="{% url 'home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16">View Jobs</a>
+        </div> 
+        <div class="w3-bar w3-black w3-xlarge">
+            <a href="{% url 'paper_home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 ">View Paper</a>
+        </div> 
+        <div class="w3-bar w3-black w3-xlarge">
+            <a href="{% url 'post_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add Job</a>
+        </div> 
+        <div class="w3-bar w3-black w3-xlarge">
+            <a href="{% url 'paper_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add paper</a>
+        </div>             
+    </header>   
+</div>
 {% block content %}
     <div class="post-entry">
         <h2>{{object.job_name}}</h2>
@@ -17,6 +36,6 @@
         <p>Packaging: {{object.package}}</p>
     </div>
 
-    <a href="{%url 'post_edit' object.pk%}">+ Edit Job Post</a>
-    <a href="{%url 'post_delete' object.pk%}">+ Delete Job Post</a>
+    <a href="{%url 'post_edit' object.pk%}">+ Edit Job </a>
+    <a href="{%url 'post_delete' object.pk%}">+ Delete Job</a>
 {% endblock content %}
