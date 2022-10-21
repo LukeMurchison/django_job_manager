@@ -179,3 +179,15 @@ form.paper_red {
 #id_package {
     margin-left: .6em;
 }
+
+#table_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#table_box{
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}

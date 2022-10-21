@@ -9,6 +9,7 @@
             <th class="w3-center">Client Name</th>
             <th class="w3-center">Start Date</th>
             <th class="w3-center">End Date</th>
+            <th class="w3-center">Status</th>
             {% for job in object_list %}
                 <div>
                     <tr>
@@ -17,6 +18,7 @@
                         <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.client}}</a></td>
                         <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.start_time}}</a></td>
                         <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.end_time}}</a></td>
+                        <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.status}}</a></td>
                     </tr>
                 </div>
             {% endfor %}

@@ -42,7 +42,7 @@ class PaperUpdateView(UpdateView):
 class PaperDeleteView(DeleteView):
     model = Paper
     template_name = 'post_paper_delete.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('paper_home')
 
 class PaperDetailView(DetailView):
     model = Paper

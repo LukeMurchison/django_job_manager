@@ -1,41 +1,55 @@
 {% extends 'base.html' %}
 {%load static%}
-<div>
-    <header>
-        <div class="w3-bar w3-black w3-xlarge">
-            <img src="blog/static/images/Oxford_Printing_White.png" alt="OXP Logo" style="width:60%" class="w3-left w3-padding w3-mobile " >
-        </div> 
-        <div  class="w3-bar w3-black w3-xlarge">
-            <a href="{% url 'home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16">View Jobs</a>
-        </div> 
-        <div class="w3-bar w3-black w3-xlarge">
-            <a href="{% url 'paper_home'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 ">View Paper</a>
-        </div> 
-        <div class="w3-bar w3-black w3-xlarge">
-            <a href="{% url 'post_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add Job</a>
-        </div> 
-        <div class="w3-bar w3-black w3-xlarge">
-            <a href="{% url 'paper_new'%}" class="w3-bar-item w3-button w3-mobile w3-padding-16 w3-right-align">Add paper</a>
-        </div>             
-    </header>   
-</div>
 {% block content %}
-    <div class="post-entry">
-        <h2>{{object.job_name}}</h2>
-        <p>Notes: {{object.notes}}</p>
-        <p>Client: {{object.client}}</p>
-        <p>Starting Time: {{object.start_time}}</p>
-        <p>End Time: {{object.end_time}}</p>
-        <p>Paper: {{object.paper}}</p>
-        <p>Copies: {{object.copies}}</p>
-        <p>Sides: {{object.sides}}</p>
-        <p>Is oversized: {{object.oversized}}</p>
-        <p>Has color: {{object.color}}</p>
-        <p>Mark up: {{object.mark_up}}</p>
-        <p>Finishing: {{object.finishing}}</p>
-        <p>Packaging: {{object.package}}</p>
-    </div>
-
-    <a href="{%url 'post_edit' object.pk%}">+ Edit Job </a>
-    <a href="{%url 'post_delete' object.pk%}">+ Delete Job</a>
+<div class="w3-container w3-center w3-margin-top" id="table_box">
+    <table class="w3-table-all w3-hoverable w3-third" id="table">
+        <tr>
+            <td>Status: {{object.status}}</td>
+        </tr>
+        <tr>
+            <td>Job Name: {{object.job_name}}</td>
+        </tr>
+        <tr>
+            <td>Notes: {{object.notes}}</td>
+        </tr>
+        <tr>
+            <td>Client: {{object.client}}</td>
+        </tr>
+        <tr>
+            <td>Starting Time: {{object.start_time}}</td>
+        </tr>
+        <tr>
+            <td>End Time: {{object.end_time}}</td>
+        </tr>
+        <tr>
+            <td>Paper: {{object.paper}}</td>
+        </tr>
+        <tr>
+            <td>Copies: {{object.copies}}</td>
+        </tr>
+        <tr>
+            <td>Sides: {{object.sides}}</td>
+        </tr>
+        <tr>
+            <td>Is oversized: {{object.oversized}}</td>
+        </tr>
+        <tr>
+            <td>Has color: {{object.color}}</td>
+        </tr>
+        <tr>
+            <td>Mark up: {{object.mark_up}}</td>
+        </tr>
+        <tr>
+            <td>Finishing: {{object.finishing}}</td>
+        </tr>
+        <tr>
+            <td>Packaging: {{object.package}}</td>
+        </tr>
+    </table>
+    <div>
+        <a class="w3-button w3-black w3-margin-top" href="{%url 'post_edit' object.pk%}">+ Edit Job</a>  
+        <a class="w3-button w3-black w3-margin-top" href="{%url 'post_delete' object.pk%}">+ Delete Job</a>
+    </div>  
+</div>
+    
 {% endblock content %}
