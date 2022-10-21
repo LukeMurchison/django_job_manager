@@ -18,7 +18,7 @@
                         <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.client}}</a></td>
                         <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.start_time}}</a></td>
                         <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.end_time}}</a></td>
-                        <td class="w3-center"><a href="{%url 'post_detail' job.pk%}">{{job.status}}</a></td>
+                        <td class="w3-center"><input type="checkbox"></td>
                     </tr>
                 </div>
             {% endfor %}
